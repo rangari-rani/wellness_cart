@@ -31,14 +31,10 @@ A full-stack wellness ecommerce platform with a complete user flow from product 
 
 ## 📸 Screenshots
 
-*(Add your screenshots inside the `/screenshots` folder and link them like this:)*
-
-![Store Page](screenshots/store.png)  
-![Login Form](screenshots/login.png)  
-![Cart](screenshots/cart.png)  
-![Address Form](screenshots/address.png)  
-![Payment Form](screenshots/payment.png)  
-![Order History](screenshots/orders.png)  
+![Product List Page](https://github.com/rangari-rani/wellness_cart/blob/b26f722f5d044876c81766025a37a89829da5c09/ProductList.png) 
+![Product Page](https://github.com/rangari-rani/wellness_cart/blob/b26f722f5d044876c81766025a37a89829da5c09/ProductView.png)  
+![Login Page](https://github.com/rangari-rani/wellness_cart/blob/b26f722f5d044876c81766025a37a89829da5c09/Login.png)  
+![Order Summary Page](https://github.com/rangari-rani/wellness_cart/blob/b26f722f5d044876c81766025a37a89829da5c09/OrderSummary.png)  
 
 ---
 

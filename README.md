@@ -45,12 +45,19 @@ A full-stack wellness ecommerce platform with a complete user flow from product 
   <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_Checkout.png" alt="Mobile Checkout" width="22%">
 </p>
 
-
-
 ---
 
+## 🚀 Installation & Running the App
+## Project Structure
 
+- `backend/` — Spring Boot API server (runs on port 8081)  
+- `frontend/` — React + Vite frontend (runs on port 5173)  
+- `docker/` — Docker setup for Redis and other services
+- 
+### 📁 Clone the Repository
 
+```bash
+git clone https://github.com/rangari-rani/wellness_cart
 ---
 
 ## 📜 License

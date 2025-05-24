@@ -38,7 +38,7 @@ A full-stack wellness ecommerce platform with a complete user flow from product 
 <p align="center">
   <img src="https://github.com/rangari-rani/wellness_cart/blob/931b8f07da910f8d91f29e71051c1cb56837c60d/Mobile_ProductList.png" alt="Mobile Product List" width="22%">
   <img src="https://github.com/rangari-rani/wellness_cart/blob/931b8f07da910f8d91f29e71051c1cb56837c60d/Mobile_ProductView.png" alt="Mobile Product View" width="22%">
-  <img src="https://github.com/rangari-rani/wellness_cart/blob/931b8f07da910f8d91f29e71051c1cb56837c60d/Mobile_Login.png" alt="Mobile Login" width="22%">
+  <img src="https://github.com/rangari-rani/wellness_cart/blob/5749d2036f5864d0f979c5199a0ac99e7a1b7784/Mobile_Login.png" alt="Mobile Login" width="22%">
   <img src="https://github.com/rangari-rani/wellness_cart/blob/931b8f07da910f8d91f29e71051c1cb56837c60d/Mobile_Checkout.png" alt="Mobile Checkout" width="22%">
 </p>
 

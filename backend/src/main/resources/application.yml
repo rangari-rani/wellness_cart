@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3310/wellnesscart
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    naming:
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6380
+
+server:
+  port: 8081

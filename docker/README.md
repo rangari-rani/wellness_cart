@@ -34,10 +34,6 @@ Host: localhost
 
 Port: 3310
 
-Username: root
-
-Password: root
-
 ⚠️ Note: These credentials are intended for local development only. Do not use them in production environments.
 
 - Notes

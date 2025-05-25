@@ -107,7 +107,7 @@ src/
 
 ---
 
-📬 Contact
+## 📬 Contact
 
 - This project is part of my personal developer portfolio. Feel free to connect or share feedback!
 - 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  

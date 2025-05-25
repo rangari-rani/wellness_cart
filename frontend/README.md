@@ -1,58 +1,114 @@
-# Frontend - Wellness Cart
+# 🎯 Wellness Cart – Frontend
 
-## Overview
-This folder contains the frontend application for Wellness Cart, built using **React** with **Vite** as the build tool.
+This is the **frontend** of the Wellness Cart project – a wellness-focused eCommerce platform. Built with **React 19 + Vite**, it offers a fast, modern, and responsive user experience. It interacts with the backend via REST APIs to provide features like product browsing, cart management, order placement, and more.
 
-## Features
-- React 18+ with functional components and hooks
-- Routing with React Router DOM
-- State management with Redux Toolkit and React Redux
-- Form handling with React Hook Form and Yup validation
-- UI components using Material-UI (MUI)
-- Axios for API requests
-- FontAwesome icons and custom fonts
+---
 
-## Prerequisites
-- Node.js (v16+ recommended)
-- npm or yarn package manager
+## 📌 Tech Stack
 
-## Setup Instructions
+- **React 19**
+- **Vite**
+- **Redux Toolkit**
+- **Material UI (MUI)**
+- **Axios**
+- **React Hook Form + Yup**
+- **FontAwesome**
 
-1. **Install dependencies:**
+---
+
+## 📂 Folder Structure
+
+```bash
+src/
+├── app/                 # Global app config
+│   ├── api/             # Axios instances
+│   ├── errors/          # Error handling components
+│   ├── layout/          # Shared layout components (Navbar, Footer)
+│   ├── models/          # TypeScript interfaces/types
+│   ├── router/          # React Router setup
+│   ├── store/           # Redux store config
+│   └── util/            # Utilities and constants
+├── features/            # Feature-based components
+│   ├── account/         # Login functionality
+│   ├── basket/          # Cart management
+│   ├── catalog/         # Product listing & filtering
+│   ├── checkout/        # Checkout and order placement
+│   ├── contact/         # Contact form
+│   ├── home/            # Landing page
+│   └── orders/          # Order history
+├── main.tsx             # Entry point
+└── App.tsx              # App shell
+```
+🖼️ All images are stored in the public/ folder.
+
+---
+
+## 🚀 Features
+- 🛍️ Browse wellness products by type and brand
+- 🛒 Add/update items in the cart
+- ✅ Place orders with predefined user
+- 📦 View order history
+- 📬 Contact form submission
+- 💡 Form validation using React Hook Form + Yup
+- 🌐 Fully responsive design for mobile, tablet, and desktop
+- 🔄 Persistent state using Redux Toolkit
+- 🚫 No .env file needed (all config is inline)
+
+---
+
+## 🔧 Setup Instructions
+📌 Prerequisites
+- Node.js (v18+ recommended)
+
+---
+
+## ⚙️ Steps to Run
+
+1. Clone the Repository
+   
+   ```bash
+   git clone https://github.com/rangari-rani/wellness-cart.git
+   cd wellness-cart/frontend
+
+   ```
+2. Install Dependencies
+
    ```bash
    npm install
-   # or
-   yarn install
+   ```
 
-2. **Start the development server:**
-    npm run dev
-# or
-    yarn dev
-The app will be available at http://localhost:5173 by default.
+3. Run the App
 
-3. **Build for production:**
-    npm run build
-# or
-    yarn build
+   ```bash
+   npm run dev
+   ```
 
-4. **Preview production build locally:**
-npm run preview
-# or
-yarn preview
+4. Visit in Browser
+   - Navigate to http://localhost:5173
 
-**Project Structure**
-- src/app 
+---
 
-- src/features 
+## 🔗 API Overview
 
-- src/assets 
+ Frontend sends requests to backend running at http://localhost:8081.
 
-**Notes**
-- CSS is handled via standard CSS modules and MUI’s styling solution (no Tailwind CSS)
+ | Method | Endpoint               | Description                    |
+| ------ | ---------------------- | ------------------------------ |
+| `GET`  | `/api/products`        | List all products              |
+| `GET`  | `/api/products/types`  | Get available product types    |
+| `GET`  | `/api/products/brands` | Get available brands           |
+| `POST` | `/api/baskets`         | Add/update items in the basket |
+| `GET`  | `/api/baskets`         | Retrieve current cart          |
+| `POST` | `/api/orders`          | Place an order                 |
+| `GET`  | `/api/orders`          | View order history             |
+| `POST` | `/api/auth/login`      | Authenticate predefined user   |
 
-- Ensure backend APIs are running and accessible to connect frontend with backend data
+📍 Base URL for API: http://localhost:8081
 
-**Useful Commands**
-- Start development server: `npm run dev`
-- Run linter: `npm run lint`
+---
 
+📬 Contact
+
+- This project is part of my personal developer portfolio. Feel free to connect or share feedback!
+- 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
+⭐ If you found this project helpful, consider giving it a star!

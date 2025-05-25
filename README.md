@@ -33,6 +33,64 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
 - 🔐 Logout functionality  
 - 📱 Fully responsive design for all devices
 
+---
+
+## 📸 Screenshots
+
+
+### Desktop Views
+![Product List Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/ProductList.png)  
+_Product List Page_
+
+![Product Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/ProductView.png)  
+_Product Detail Page_
+
+![Login Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Login.png)  
+_Login Page_
+
+![Order Summary Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/OrderSummary.png)  
+_Order Summary_
+
+### Mobile Views
+<p align="center">
+  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_ProductList.png" alt="Mobile Product List" width="22%">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_ProductView.png" alt="Mobile Product View" width="22%">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_Login.png" alt="Mobile Login" width="22%">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_Checkout.png" alt="Mobile Checkout" width="22%">
+</p>
+_Mobile responsive design screenshots_
+
+---
+
+## 🚀 Getting Started
+
+To get the full application up and running, please follow the step-by-step instructions in the relevant folders above. The typical workflow is:
+
+1. Set up and run the database, Redis, and other services via Docker.  
+2. Start the backend Spring Boot API server.  
+3. Launch the frontend React app.
+
+---
+
+## 📁 Project Structure & Detailed Documentation
+
+This repository is organized into multiple folders, each with its own README to help you get started quickly and understand that part of the project:
+
+- [Backend (Spring Boot) README](backend/README.md)  
+  Detailed instructions to build, run, and test the backend API.
+
+- [Frontend (React + Vite) README](frontend/README.md)  
+  Setup and run instructions for the frontend UI.
+
+- [Docker Setup README](docker/README.md)  
+  How to start and manage all services using Docker and Docker Compose.
+
+
+---
+
 ## 🔐 Authentication & Security
 
 - Login is required to:
@@ -101,64 +159,6 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
     - Filter metadata
   - Significantly reduces database load
   - Improves response times for API calls
-
----
-
-## 📸 Screenshots
-
-
-### Desktop Views
-![Product List Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/ProductList.png)  
-_Product List Page_
-
-![Product Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/ProductView.png)  
-_Product Detail Page_
-
-![Login Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Login.png)  
-_Login Page_
-
-![Order Summary Page](https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/OrderSummary.png)  
-_Order Summary_
-
-### Mobile Views
-<p align="center">
-  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_ProductList.png" alt="Mobile Product List" width="22%">
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_ProductView.png" alt="Mobile Product View" width="22%">
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_Login.png" alt="Mobile Login" width="22%">
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/rangari-rani/wellness_cart/blob/c06e8de2a29827d2746596f839cc78aa5cd8d29f/screenshots/Mobile_Checkout.png" alt="Mobile Checkout" width="22%">
-</p>
-_Mobile responsive design screenshots_
-
----
-
-## 🚀 Getting Started
-
-To get the full application up and running, please follow the step-by-step instructions in the relevant folders above. The typical workflow is:
-
-1. Set up and run the database, Redis, and other services via Docker.  
-2. Start the backend Spring Boot API server.  
-3. Launch the frontend React app.
-
----
-
-## 📁 Project Structure & Detailed Documentation
-
-This repository is organized into multiple folders, each with its own README to help you get started quickly and understand that part of the project:
-
-- [Backend (Spring Boot) README](backend/README.md)  
-  Detailed instructions to build, run, and test the backend API.
-
-- [Frontend (React + Vite) README](frontend/README.md)  
-  Setup and run instructions for the frontend UI.
-
-- [Docker Setup README](docker/README.md)  
-  How to start and manage all services using Docker and Docker Compose.
-
-
----
 
 ## 🧩 Challenges Faced
 

@@ -1,54 +1,111 @@
-# Backend - Wellness Cart
+# 🛠️ Wellness Cart – Backend
 
-## Overview
+This is the backend service for **Wellness Cart**, a wellness-focused eCommerce platform. It is built using **Spring Boot** and exposes RESTful APIs for products, cart operations, and order management. The backend uses **MySQL** for data persistence and **Redis** for caching frequently accessed product/filter data. The system is modular, RESTful, and Docker-ready.
 
-This folder contains the backend service for the Wellness Cart application. It is built using **Spring Boot** and connects to the MySQL database.
+---
 
-## Features
+## 📌 Tech Stack
 
-- REST APIs for product, order, brand, and type management
-- MySQL database integration
-- Handles business logic for wellness-cart operations
+- **Java**
+- **Spring Boot**
+- **MySQL**
+- **Redis**
+- **Maven**
 
-## Prerequisites
+> 🐳 *Dockerized setup available – see [Docker README](../docker/README.md) for full containerized deployment.*
 
-- Java JDK 17+ (or your required version)
-- Maven or Gradle (depending on your build tool)
-- MySQL server running (configured via Docker or locally)
-- Docker (optional, if using Docker for database)
+---
 
-## Setup Instructions
+## 📂 Project Structure
 
-1. **Configure database:**
+```bash
+src/main/java/com/wellnesscart/backend/
 
-   - Update `application.properties` (or `application.yml`) with your MySQL connection details:
-     ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3310/wellness_cart_db
-     spring.datasource.username=root
-     spring.datasource.password=root
-     ```
+├── config          # Global configuration classes
+├── controller      # REST controllers
+├── entity          # JPA entities
+├── exceptions      # Custom exception handling
+├── mapper          # DTO to entity mappers
+├── model           # Request/response models (DTOs)
+├── repository      # Spring Data JPA repositories
+├── security        # Security configs
+└── service         # Business logic services
+```
+---
 
-2. **Build the backend:**
+## 🚀 Key Features
 
+- 🛍️ Product browsing with type & brand-based filtering
+- 🛒 Cart management (add, update, view)
+- ✅ Place orders (for a predefined user)
+- ⚡ Redis Caching for fast product & filter response
+- 🔗 Clean, modular, RESTful architecture
+
+  ---
+
+##🔧 Setup Instructions
+
+📌 Prerequisites
+- Java 17+
+- Maven
+- MySQL 8.0+
+- Redis
+
+  ---
+
+## ⚙️ Steps to Run Locally
+
+1. Clone the Repository
+   
    ```bash
-   ./mvnw clean install
+   git clone https://github.com/rangari-rani/wellness_cart.git
+   cd wellness-cart/backend
+   ```
+3. Configure Database in application.yml
+   
+   ```bash
+   spring:
+     datasource:
+    url: jdbc:mysql://localhost:3310/wellnesscart
+    username: root
+    password: your_password
+     redis:
+    host: localhost
+    port: 6380
 
    ```
-
-3. **Run the backend:**
+4. Build and Run the App
+   
+   ```bash
+   ./mvnw clean install
    ./mvnw spring-boot:run
 
-4. **Test API:**
-   Use Postman or any API client to test endpoints, e.g., http://localhost:8080/api/products
+   ```
+5. Access APIs via Postman or Browser
+   
+- GET /api/products – Product listing with optional filters
+- GET /api/products/brands – Brand list
+- GET /api/products/types – Product types
+- POST /api/baskets – Add/update items in cart
+- GET /api/baskets – View cart
+- POST /api/orders – Place order
+- POST /api/auth/login – Authenticate
+  
+  Base URL: http://localhost:8081/
+  
+---
 
-**Important Notes**
+### 💡 Redis Caching
+- ✅ Product and filter data is cached in Redis for performance
+- ♻️ Cache automatically refreshes with TTL (configurable)
+- ⚙️ Configuration handled via application.yml
 
-- The database schema and initial data are loaded via Docker volume mount or SQL scripts.
+---
 
-- Make sure the MySQL container or service is running before starting the backend.
+## 📬 Contact
 
-**Useful Commands**
+This project is part of my developer portfolio.  
+If you'd like to discuss it or have any feedback, feel free to connect!
 
-- Run tests: ./mvnw test
-
-- Package jar: ./mvnw package
+Developed by **Rani Rangari**  
+🔗 [LinkedIn](https://linkedin.com/in/your-profile) | ✉️ [Email](mailto:your.email@example.com)

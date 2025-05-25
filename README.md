@@ -12,7 +12,7 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
 - [**React.js**](https://reactjs.org) – JavaScript library for building user interfaces.
 - [**Vite**](https://vitejs.dev) – Fast frontend build tool and development server.
 - [**Material-UI**](https://mui.com) – React UI framework for accessible and customizable components.
-- [**TypeScript**](https://www.typescriptlang.org/) - A typed superset of JavaScript that adds static types to improve code quality and developer experience.
+- [**TypeScript**](https://www.typescriptlang.org/) - A typed superset of JavaScript that adds static types to improve code quality.
 - [**MySQL**](https://www.mysql.com) – Relational database system for storing application data.
 - [**Redis**](https://redis.io) – In-memory key-value store used for caching data.
 - [**Docker**](https://www.docker.com) – Platform for containerizing applications.

@@ -16,6 +16,7 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
 - [**Redis**](https://redis.io) – In-memory key-value store used for caching data.
 - [**Docker**](https://www.docker.com) – Platform for containerizing applications.
 - [**Docker Compose**](https://docs.docker.com/compose/) – Tool to define and run multi-container Docker applications.
+- [**Postman**](https://www.postman.com/) - Tool for testing, documenting, and sharing backend APIs.
 
 ---
 
@@ -132,42 +133,29 @@ _Mobile responsive design screenshots_
 
 ---
 
-## 🚀 Installation & Running the App
+## 🚀 Getting Started
 
-### Prerequisites
-- Make sure you have [Docker](https://docs.docker.com/get-docker/) installed and running.
-- Java 17+ and Node.js 16+ installed on your machine.
-  
-### 📁 Clone the Repository
-```bash
-git clone https://github.com/rangari-rani/wellness_cart.git
-cd wellness-cart
-```
-### 🐳 Docker Setup
-```bash
- cd docker
- docker-compose up -d
-```
- Starts MySQL, Redis, and loads initial data.
+To get the full application up and running, please follow the step-by-step instructions in the relevant folders above. The typical workflow is:
 
-### 🏗️ Backend Setup
-```bash
-cd backend
-./mvnw clean install
-./mvnw spring-boot:run
-```
- Test API endpoint: http://localhost:8081/api/products
+1. Set up and run the database, Redis, and other services via Docker.  
+2. Start the backend Spring Boot API server.  
+3. Launch the frontend React app.
 
-### 🎨 Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
+---
 
-### 🌐 Open your browser at:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:8081
+## 📁 Project Structure & Detailed Documentation
+
+This repository is organized into multiple folders, each with its own README to help you get started quickly and understand that part of the project:
+
+- [Backend (Spring Boot) README](backend/README.md)  
+  Detailed instructions to build, run, and test the backend API.
+
+- [Frontend (React + Vite) README](frontend/README.md)  
+  Setup and run instructions for the frontend UI.
+
+- [Docker Setup README](docker/README.md)  
+  How to start and manage all services using Docker and Docker Compose.
+
 
 ---
 
@@ -218,5 +206,10 @@ I used **Docker and `docker-compose`** to containerize:
 [MIT License](LICENSE)
 
 ---
-📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
-⭐ If you found this project helpful, please consider giving it a star!
+
+## 📬 Contact
+
+- This project is part of my personal developer portfolio. Feel free to connect or share feedback!
+- 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
+⭐ If you found this project helpful, consider giving it a star!
+

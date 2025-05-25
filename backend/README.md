@@ -102,10 +102,5 @@ src/main/java/com/wellnesscart/backend/
 
 ---
 
-## 📬 Contact
-
-This project is part of my developer portfolio.  
-If you'd like to discuss it or have any feedback, feel free to connect!
-
-Developed by **Rani Rangari**  
-🔗 [LinkedIn](https://linkedin.com/in/your-profile) | ✉️ [Email](mailto:your.email@example.com)
+📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
+⭐ If you found this project helpful, please consider giving it a star!

@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { User } from "../../app/models/user";
 import { FieldValues } from "react-hook-form";
 import agent from "../../app/api/agent";
@@ -15,6 +15,7 @@ const initialState: AccountState = {
   error: null,
 };
 
+// 🔐 Login thunk
 export const signInUser = createAsyncThunk<User, FieldValues>(
   "auth/login",
   async (data, thunkAPI) => {
@@ -28,11 +29,11 @@ export const signInUser = createAsyncThunk<User, FieldValues>(
   }
 );
 
+// 🌐 Auto-fetch user from localStorage
 export const fetchCurrentUser = createAsyncThunk<User | null>(
   "auth/fetchCurrentUser",
   async (_, thunkAPI) => {
     try {
-      //Retrieve user data from local storage
       const userString = localStorage.getItem("user");
       if (userString) {
         const user = JSON.parse(userString) as User;
@@ -40,24 +41,22 @@ export const fetchCurrentUser = createAsyncThunk<User | null>(
       }
       return null;
     } catch (error) {
-      console.error("Error Fetching current User:", error);
+      console.error("Error fetching current user:", error);
       return null;
     }
   }
 );
 
-export const logoutUser = createAsyncThunk<void>(
-  "auth/logout",
-  async (_, thunkAPI) => {
-    try {
-      //Remove user from local storage
-      localStorage.removeItem("user");
-    } catch (error) {
-      console.error("Error logging out user");
-    }
+// 🔓 Logout thunk
+export const logoutUser = createAsyncThunk<void>("auth/logout", async () => {
+  try {
+    localStorage.removeItem("user");
+  } catch (error) {
+    console.error("Error logging out user:", error);
   }
-);
+});
 
+// 🧠 Main slice
 export const accountSlice = createSlice({
   name: "account",
   initialState,
@@ -73,30 +72,38 @@ export const accountSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    // ✅ Explicit login only — show success toast
+    builder.addCase(signInUser.fulfilled, (state, action) => {
+      state.user = action.payload;
+      state.error = null;
+      toast.success("Sign in successful");
+    });
+
+    // ❌ Explicit login failed — show error toast
+    builder.addCase(signInUser.rejected, (state, action) => {
+      const payload = action.payload as any;
+      state.error = payload?.error || "Sign in failed. Please try again";
+      toast.error(state.error);
+    });
+
+    // ✅ Auto-login — no toast
+    builder.addCase(fetchCurrentUser.fulfilled, (state, action) => {
+      state.user = action.payload;
+      state.error = null;
+    });
+
+    // ❌ Auto-login failed — silent fail
+    builder.addCase(fetchCurrentUser.rejected, (state) => {
+      state.error = null;
+    });
+
+    // 🔓 Logout success — toast info
     builder.addCase(logoutUser.fulfilled, (state) => {
       state.user = null;
       state.error = null;
-      toast.info('Logged out successfully');
+      toast.info("Logged out successfully");
     });
-  
-    builder.addMatcher(
-      isAnyOf(signInUser.fulfilled, fetchCurrentUser.fulfilled),
-      (state, action) => {
-        state.user = action.payload;
-        state.error = null;
-        toast.success('Sign in successful');
-      }
-    );
-  
-    builder.addMatcher(
-      isAnyOf(signInUser.rejected, fetchCurrentUser.rejected),
-      (state, action) => {
-        const payload = action.payload as string | undefined;
-        state.error = payload ?? 'Sign in failed. Please try again';
-        toast.error(state.error);
-      }
-    );
-  }
-  
+  },
 });
+
 export const { logOut, clearError } = accountSlice.actions;

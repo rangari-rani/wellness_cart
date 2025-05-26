@@ -7,7 +7,6 @@ import { Add, Remove } from "@mui/icons-material";
 import BasketSummary from "./BasketSummary";
 import { Link } from "react-router-dom";
 import React from "react";
-
 export default function BasketPage(){
     const {basket} = useAppSelector(state=>state.basket);
     const dispatch = useAppDispatch();
@@ -42,7 +41,39 @@ export default function BasketPage(){
             minimumFractionDigits: 2
         }).format(price);
     };
-    if(!basket || basket.items.length ===0 ) return <Typography variant="h3">Your basket is empty. Please add few items!!!</Typography>
+
+    if(!basket || basket.items.length ===0 ) return <Box
+    sx={{
+      minHeight: '70vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+      p: 3,
+    }}
+  >
+    <img
+      src="/images/emptycart.webp" // 💡 Place this image in your public/images folder
+      alt="Empty cart"
+      style={{ maxWidth: '400px', width: '100%', marginBottom: '2rem' }}
+    />
+    <Typography variant="h4" gutterBottom>
+      Your basket is empty
+    </Typography>
+    <Typography variant="body1" color="textSecondary" gutterBottom>
+      Looks like you haven't added anything to your basket yet.
+    </Typography>
+    <Button
+      component={Link}
+      to="/store"
+      variant="contained"
+      color="success"
+      sx={{ mt: 2 }}
+    >
+      Go to Store
+    </Button>
+  </Box>
     return (
         <>
         <TableContainer component={Paper}>

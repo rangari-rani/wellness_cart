@@ -60,6 +60,7 @@ export default function PaymentForm(){
             fullWidth
             autoComplete="cc-csc"
             variant="standard"
+            type="password"
             error={!!errors.cvv}
           />
         </Grid>

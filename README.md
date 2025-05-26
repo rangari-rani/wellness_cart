@@ -88,77 +88,20 @@ This repository is organized into multiple folders, each with its own README to 
 - [Docker Setup README](docker/README.md)  
   How to start and manage all services using Docker and Docker Compose.
 
-
 ---
+## 🧩 Architecture & UX Summary
+🔐 Authentication & Security
+- Login required to add items to cart and place orders, ensuring only authorized access to sensitive actions.
 
-## 🔐 Authentication & Security
+🧠 State Management
+- Uses React state and localStorage to preserve cart across reloads and through login for seamless experience.
 
-- Login is required to:
-  - Add items to the cart
-  - Complete purchases
-- Ensures only authorized users can perform sensitive actions
-  
+💡 User Experience
+- Responsive UI (MUI) with mobile-first design, multi-step checkout (Address → Payment → Review) with validation, login prompts for restricted actions, and pagination for products and orders.
+
+⚙️ DevOps & Deployment
+- Dockerized setup with MySQL, Redis, and Spring Boot ensures reproducibility and fast onboarding; Redis caching improves API speed and reduces DB load.
 ---
-
-## 🧠 State Management
-
-- Frontend state is managed using:
-  - React state
-  - `localStorage`
-- Benefits:
-  - Cart contents are preserved across page reloads
-  - Cart remains intact through login flow
-  - Provides a seamless user experience
-
----
-
-## 💡 User Experience Details
-
-- **Responsive Design**
-  - Optimized for both desktop and mobile devices
-
-- **UI Library**
-  - Built with Material-UI for:
-    - Consistent styling
-    - Accessibility
-    - Mobile responsiveness
-
-- **Checkout Flow**
-  - Multi-step process:
-    - Address → Payment → Review
-  - Each step includes input validation
-  - Enhances clarity and reliability
-
-- **Access Control**
-  - Login prompts are triggered for restricted actions
-  - Prevents unauthorized cart modifications
-  - Guides user through the intended flow
-
-- **Pagination**
-  - Implemented for:
-    - Product listings
-    - Order history
-  - Improves load performance and navigation
-
----
-
-## ⚙️ DevOps & Deployment
-
-- **Containerization with Docker & Docker Compose**
-  - Services containerized:
-    - MySQL (with schema/data initialization)
-    - Redis (for caching)
-    - Spring Boot backend
-  - Benefits:
-    - Reproducible development environments
-    - Simplified setup and deployment process
-
-- **Redis Caching**
-  - Caches:
-    - Product listings
-    - Filter metadata
-  - Significantly reduces database load
-  - Improves response times for API calls
 
 ## 🧩 Challenges Faced
 

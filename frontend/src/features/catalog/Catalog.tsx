@@ -219,6 +219,7 @@ export default function Catalog() {
           </Paper>
         </Grid>
 
+
         {/* Product List */}
         <Grid item xs={12} md={9} lg={9.5}>
           <Box px={isMobile ? 0 : 2}>

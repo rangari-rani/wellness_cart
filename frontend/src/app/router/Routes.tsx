@@ -13,6 +13,7 @@ import RequireAuth from "./RequireAuth";
 import CheckoutPage from "../../features/checkout/CheckoutPage";
 import Order from "../../features/orders/Order";
 import React from "react";
+import ProfilePage from "../../features/account/ProfilePage";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
                 element: <RequireAuth/>, children:[
                     {path:'checkout', element:<CheckoutPage/>},
                     {path:'orders', element:<Order/>},
+                    { path: 'profile', element: <ProfilePage /> } 
                 ]
             },
             {path:'', element:<HomePage/>},

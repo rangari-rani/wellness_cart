@@ -153,7 +153,7 @@ I used **Docker and `docker-compose`** to containerize:
 
 ## 📬 Contact
 
-- This project is part of my personal developer portfolio. Feel free to connect or share feedback!
+- This project is part of my personal developer portfolio.  If you're hiring or open to referrals, I’d love to connect!
 - 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
 ⭐ If you found this project helpful, consider giving it a star!
 

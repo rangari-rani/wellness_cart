@@ -25,7 +25,7 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
 
 - 🏠 Home page with wellness journey content  
 - 🛍️ Store with product listings, search, and filters (brand & type)  
-- 🛒 Add to cart (login required)  
+- 🛒 Add to cart (login required predeined user)  
 - 📍 Address form for delivery info  
 - 💳 Payment form (simulated with debit card input)  
 - ✅ Order confirmation page  

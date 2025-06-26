@@ -4,6 +4,12 @@ Wellness Cart is a full-stack ecommerce platform dedicated to wellness products,
 
 ---
 
+🎥 **Video Demo Available:**  
+👉 [Watch the demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7333097056221155328/) *(includes walkthrough with key features)*
+
+---
+
+
 ## ⚙️ Tech Stack
 
 - [**Java**](https://www.oracle.com/java/) – Programming language used for backend development.

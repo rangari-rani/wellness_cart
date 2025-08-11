@@ -1,16 +1,19 @@
-# 🛠️ Wellness Cart – Backend
+# 🛍️ Wellness Cart – Backend (Spring Boot)  
 
-This is the backend service for **Wellness Cart**, a wellness-focused eCommerce platform. Built using **Spring Boot**, it exposes RESTful APIs for product listing, cart operations, and order placement. The backend uses **MySQL** for persistence and **Redis** to cache frequently accessed product and filter data. The system is modular, RESTful, and Docker-ready.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+
+This is the backend application of Wellness Cart, built with Java, Spring Boot, and MySQL.  
+It handles RESTful APIs for product listing, cart operations, and order.
 
 ---
 
-## 📌 Tech Stack
+## ⚙️ Tech Stack
 
-- **Java 17**
-- **Spring Boot**
-- **MySQL**
-- **Redis**
-- **Maven**
+- **[Java](https://www.oracle.com/java/)** – Core backend language for building scalable APIs  
+- **[Spring Boot](https://spring.io/projects/spring-boot)** – Framework for creating RESTful backend services  
+- **[MySQL](https://www.mysql.com/)** – Relational database for storing users, projects, and tasks  
 
 > 🐳 *Dockerized setup available – see [Docker README](../docker/README.md) for containerized deployment.*
 
@@ -31,81 +34,84 @@ src/main/java/com/wellnesscart/backend/
 ├── security        # Security configurations
 └── service         # Business logic services
 ```
----
 
 ## 🚀 Key Features
 
-- 🛍️ Browse products with filtering (by type & brand)
-- 🛒 Add to cart, update quantity, view cart
-- ✅ Place orders 
-- ⚡ Redis caching to improve product/filter API response time
-- 🔗 Modular and clean RESTful API design
+- 🛍️ Browse products with filtering (by type & brand)  
+- 🛒 Add to cart, update quantity, view cart  
+- ✅ Place orders  
+- ⚡ Redis caching to improve product/filter API response time  
+- 🔗 Modular and clean RESTful API design  
 
-  ---
+---
 
-##🔧 Setup Instructions
+## 🔧 Setup Instructions
 
-📌 Prerequisites
-- Java 17+
-- Maven
-- MySQL 8.0+
-- Redis (locally installed or Docker-based)
+### 📌 Prerequisites
 
-  ---
+- Java 17+  
+- Maven  
+- MySQL 8.0+  
+- Redis (locally installed or Docker-based)  
 
-## ⚙️ Steps to Run Locally
+### ⚙️ Steps to Run Locally  
 
-1. Clone the Repository
-   
-   ```bash
-   git clone https://github.com/rangari-rani/wellness_cart.git
-   cd wellness-cart/backend
-   ```
-3. Configure Database in application.yml
-   
-   ```bash
-   spring:
-     datasource:
-    url: jdbc:mysql://localhost:3310/wellnesscart
-    username: root
+1. Clone the Repository  
+```bash
+git clone https://github.com/rangari-rani/wellness_cart.git
+cd wellness_cart/backend
+```
+
+2. Configure Database and Redis in `application.yml`
+```bash
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3310/your_database_name
+    username: your_username
     password: your_password
-     redis:
+  redis:
     host: localhost
     port: 6380
+```
 
-   ```
-4. Build and Run the App
-   
-   ```bash
-   ./mvnw clean install
-   ./mvnw spring-boot:run
+3. Build and Run the App  
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
+```
 
-   ```
-5. Access APIs via Postman or Browser
-   
-  Base URL: http://localhost:8081/
-  
-| Method | Endpoint               | Description                      |
+# 4. Access APIs via Postman or Browser  
+
+Base URL: http://localhost:8081/  
+
+| Method | Endpoint               | Description                       |
 | ------ | ---------------------- | -------------------------------- |
-| GET    | `/api/products`        | List all products                |
-| GET    | `/api/products/brands` | Get available brands             |
-| GET    | `/api/products/types`  | Get available product types      |
-| POST   | `/api/baskets`         | Add/update items in cart         |
-| GET    | `/api/baskets`         | View cart items                  |
+| GET    | `/api/products`        | List all products                 |
+| GET    | `/api/products/brands` | Get available brands              |
+| GET    | `/api/products/types`  | Get available product types       |
+| POST   | `/api/baskets`         | Add/update items in cart          |
+| GET    | `/api/baskets`         | View cart items                   |
 | POST   | `/api/orders`          | Place an order (predefined user) |
-| POST   | `/api/auth/login`      | User authentication              |
-
-   
----
-
-### 💡 Redis Caching
-- ✅ Product and filter data is cached in Redis for performance
-- 🔄 TTL and refresh policy configured in application.yml
-- ⚡ Improves response time and reduces database load
+| POST   | `/api/auth/login`      | User authentication               |
 
 ---
 
-📬 Contact
-- This project is part of my personal developer portfolio. Feel free to connect or share feedback!
+## 💡 Redis Caching
+
+- ✅ Product and filter data is cached in Redis for performance  
+- 🔄 TTL and refresh policy configured in `application.yml`  
+- ⚡ Improves response time and reduces database load  
+
+---
+
+## 📜 License
+
+[MIT License](LICENSE)  
+
+---
+
+## 📬 Contact
+
 - 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
-⭐ If you found this project helpful, consider giving it a star!
+- ⭐ If you found this project helpful or insightful, feel free to leave a ⭐!
+

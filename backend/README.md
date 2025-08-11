@@ -104,14 +104,7 @@ Base URL: http://localhost:8081/
 
 ---
 
-## 📜 License
-
-[MIT License](LICENSE)  
-
----
-
 ## 📬 Contact
 
 - 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
 - ⭐ If you found this project helpful or insightful, feel free to leave a ⭐!
-

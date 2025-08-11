@@ -56,7 +56,7 @@ docker/
 | Component | URL                                                    |
 | --------- | ------------------------------------------------------ |
 | Frontend  | [http://localhost:5173](http://localhost:5173)         |
-| Backend   | [http://localhost:8081/api](http://localhost:8081/api) |
+| Backend   | [http://localhost:8081/api](http://localhost:8081) |
 | MySQL     | localhost:3310 (for tools)                             |
 | Redis     | localhost:6380 (no GUI UI)                             |
 

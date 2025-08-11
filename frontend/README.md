@@ -1,18 +1,19 @@
-# 🎯 Wellness Cart – Frontend
+# 🛍️ Wellness Cart – Frontend (React + Vite)
 
-This is the **frontend** of the Wellness Cart project – a wellness-focused eCommerce platform. Built with **React 19 + Vite**, it offers a fast, modern, and responsive user experience. It interacts with the backend via REST APIs to provide features like product browsing, cart management, order placement, and more.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+This is the **frontend** application of **Project Execution Hub**, built with **React**, **Tailwind CSS**, and **Vite**.  
+It serves the user interface for managing product browsing, cart management, order placement.  
 
 ---
 
-## 📌 Tech Stack
+## ⚙️ Tech Stack
 
-- **React 19**
-- **Vite**
-- **Redux Toolkit**
-- **Material UI (MUI)**
-- **Axios**
-- **React Hook Form + Yup**
-- **FontAwesome**
+- [**React.js**](https://reactjs.org/) – Building dynamic, component-based user interfaces  
+- [**Vite**](https://vitejs.dev/) – Lightning-fast frontend build tool and development server
+
+> ➡️ For full feature list and screenshots, check the [root README](../README.md).  
 
 ---
 
@@ -39,20 +40,7 @@ src/
 ├── main.tsx             # Entry point
 └── App.tsx              # App shell
 ```
-🖼️ All images are stored in the public/ folder.
-
----
-
-## 🚀 Features
-- 🛍️ Browse wellness products by type and brand
-- 🛒 Add/update items in the cart
-- ✅ Place orders with predefined user
-- 📦 View order history
-- 📬 Contact form submission
-- 💡 Form validation using React Hook Form + Yup
-- 🌐 Fully responsive design for mobile, tablet, and desktop
-- 🔄 Persistent state using Redux Toolkit
-- 🚫 No .env file needed (all config is inline)
+🖼️ All images are stored in the public/ folder.  
 
 ---
 
@@ -62,53 +50,33 @@ src/
 
 ---
 
-## ⚙️ Steps to Run
+## ⚙️ Setup Instructions
 
-1. Clone the Repository
+### 1. Clone the repository
    
    ```bash
    git clone https://github.com/rangari-rani/wellness-cart.git
    cd wellness-cart/frontend
 
    ```
-2. Install Dependencies
+### 2. Install Dependencies
 
    ```bash
    npm install
    ```
 
-3. Run the App
+### 3. Start the development server
 
    ```bash
    npm run dev
    ```
 
-4. Visit in Browser
-   - Navigate to http://localhost:5173
-
----
-
-## 🔗 API Overview
-
- Frontend sends requests to backend running at http://localhost:8081.
-
- | Method | Endpoint               | Description                    |
-| ------ | ---------------------- | ------------------------------ |
-| `GET`  | `/api/products`        | List all products              |
-| `GET`  | `/api/products/types`  | Get available product types    |
-| `GET`  | `/api/products/brands` | Get available brands           |
-| `POST` | `/api/baskets`         | Add/update items in the basket |
-| `GET`  | `/api/baskets`         | Retrieve current cart          |
-| `POST` | `/api/orders`          | Place an order                 |
-| `GET`  | `/api/orders`          | View order history             |
-| `POST` | `/api/auth/login`      | Authenticate predefined user   |
-
-📍 Base URL for API: http://localhost:8081
+> The app will be available at:  
+> 🌐 http://localhost:5173  
 
 ---
 
 ## 📬 Contact
-
-- This project is part of my personal developer portfolio. Feel free to connect or share feedback!
-- 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
-⭐ If you found this project helpful, consider giving it a star!
+     
+📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)   
+⭐ If you found this project helpful or insightful, feel free to leave a ⭐!  

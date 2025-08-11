@@ -1,43 +1,45 @@
-# 🛍️ Wellness Cart – An eCommerce Web App
+# 🛍️ Wellness Cart – User-Focused Wellness eCommerce (CRUD App)
 
-Wellness Cart is a full-stack ecommerce platform dedicated to wellness products, featuring smooth user flows from browsing to checkout. Built with React, Spring Boot, and Docker, the app emphasizes responsive design, caching for performance, and containerized deployment.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+
+A full-stack web application for seamless wellness product shopping, featuring user login, product browsing, cart management, and a smooth multi-step checkout experience.
 
 ---
 
-🎥 **Video Demo Available:**  
-👉 [Watch the demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7333097056221155328/) *(includes walkthrough with key features)*
+🎥 **Video Demo Available:**   [Watch the demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7333097056221155328/) *(includes walkthrough with key features)*
 
 ---
 
+## 📚 About This Project  
+
+**Wellness Cart** is a full-stack eCommerce web application built with **React** and **Spring Boot**, developed independently as a hands-on full-stack project.  
+
+- All product data and images are predefined for demo purposes.  
+- User credentials (username and password) are preset to simplify access.  
+> 🕒 *This CRUD app serves as a foundational project focusing on core user functionality.*  
+
+---
 
 ## ⚙️ Tech Stack
 
-- [**Java**](https://www.oracle.com/java/) – Programming language used for backend development.
-- [**Spring Boot**](https://spring.io/projects/spring-boot) – Framework for building production-ready Java applications.
-- [**Maven**](https://maven.apache.org) – Build automation tool for managing Java projects.
 - [**React.js**](https://reactjs.org) – JavaScript library for building user interfaces.
-- [**Vite**](https://vitejs.dev) – Fast frontend build tool and development server.
-- [**Material-UI**](https://mui.com) – React UI framework for accessible and customizable components.
-- [**TypeScript**](https://www.typescriptlang.org/) - A typed superset of JavaScript that adds static types to improve code quality.
+- [**Spring Boot**](https://spring.io/projects/spring-boot) – Framework for building production-ready Java applications.
 - [**MySQL**](https://www.mysql.com) – Relational database system for storing application data.
 - [**Redis**](https://redis.io) – In-memory key-value store used for caching data.
 - [**Docker**](https://www.docker.com) – Platform for containerizing applications.
-- [**Docker Compose**](https://docs.docker.com/compose/) – Tool to define and run multi-container Docker applications.
-- [**Postman**](https://www.postman.com/) - Tool for testing, documenting, and sharing backend APIs.
 
 ---
 
 ## 🌟 Features
 
-- 🏠 Home page with wellness journey content  
-- 🛍️ Store with product listings, search, and filters (brand & type)  
-- 🛒 Add to cart (login required predeined user)  
-- 📍 Address form for delivery info  
-- 💳 Payment form (simulated with debit card input)  
-- ✅ Order confirmation page  
-- 📦 Orders page to view order history  
-- 🔐 Logout functionality  
-- 📱 Fully responsive design for all devices
+- 🛍️ User-friendly product browsing with search and filter options  
+- 🔐 Secure login and cart management for seamless shopping  
+- 🛒 Multi-step checkout: address input, simulated payment, and order confirmation  
+- 📦 Order history with detailed summaries  
+- 📱 Responsive design optimized for desktop and mobile  
 
 ---
 
@@ -71,13 +73,25 @@ _Mobile responsive design screenshots_
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started  
 
-To get the full application up and running, please follow the step-by-step instructions in the relevant folders above. The typical workflow is:
+1. Start database, Redis, and backend services using Docker Compose:
 
-1. Set up and run the database, Redis, and other services via Docker.  
-2. Start the backend Spring Boot API server.  
-3. Launch the frontend React app.
+```bash
+docker-compose up -d
+```
+2. Run backend API (Spring Boot):
+
+```bash
+./mvnw spring-boot:run
+```
+
+3. Launch frontend React app:
+
+```bash
+npm install
+npm run dev
+```
 
 ---
 
@@ -95,61 +109,25 @@ This repository is organized into multiple folders, each with its own README to 
   How to start and manage all services using Docker and Docker Compose.
 
 ---
-## 🧩 Architecture & UX Summary
-🔐 Authentication & Security
-- Login required to add items to cart and place orders, ensuring only authorized access to sensitive actions.
 
-🧠 State Management
-- Uses React state and localStorage to preserve cart across reloads and through login for seamless experience.
+## 🧩 Architecture & Key Highlights
 
-💡 User Experience
-- Responsive UI (MUI) with mobile-first design, multi-step checkout (Address → Payment → Review) with validation, login prompts for restricted actions, and pagination for products and orders.
-
-⚙️ DevOps & Deployment
-- Dockerized setup with MySQL, Redis, and Spring Boot ensures reproducibility and fast onboarding; Redis caching improves API speed and reduces DB load.
----
-
-## 🧩 Challenges Faced
-
-### 🧠 Frontend Logic & User Experience
-
-#### 🛒 Cart + Login Flow  
-Managing cart state when a user added products **before logging in** was tricky.  
-I implemented a **login prompt** for cart actions and preserved cart data using **React state and `localStorage`**, ensuring a seamless post-login experience.
-
-#### 🧾 Multi-Step Checkout  
-The checkout flow involved three sequential forms: **Address → Payment → Review**.  
-To handle transitions and validations cleanly:
-- I **lifted state** up across components.
-- Enforced **step-by-step validation**, improving UX and form reliability.
+- **Secure authentication** requiring login to add to cart and place orders.  
+- **State management** using React state and `localStorage` to persist cart data seamlessly across sessions.  
+- **Responsive, user-friendly UI** with multi-step checkout and validation.  
+- **Backend optimizations** including Redis caching to speed up data retrieval and reduce database load.  
+- **Dockerized environment** for consistent and easy deployment of backend, database, and cache services.  
 
 ---
 
-### ⚙️ Backend Optimization & DevOps
+## ⚙️ Challenges & Learnings
 
-#### 🧠 Redis Caching  
-Initial product and filter loading directly from MySQL caused latency.  
-I introduced **Redis caching** to store frequently accessed data like product lists and filter metadata.  
-This significantly reduced backend DB load and improved **response times**.
-
-#### 🐳 Docker for Consistent Setup  
-Manually managing MySQL, Redis, and Spring Boot services was error-prone across environments.  
-I used **Docker and `docker-compose`** to containerize:
-- MySQL with mounted SQL for initial schema and data.
-- Redis for caching.
-- Backend connectivity — ensuring **consistent and fast onboarding** for any environment.
-
----
-
-## 💡 Future Improvements
-
-- 💳 Integrate a real payment gateway (e.g., Stripe or PayPal)
-- 🛠️ Add an admin dashboard for managing products and orders
-- 🔍 Enhance search with fuzzy matching and advanced sorting
-- 📬 Add email notifications for order confirmations
+- Handling cart state before and after login for smooth user experience.  
+- Designing a multi-step checkout with clear validation at each step.  
+- Implementing Redis caching to improve backend performance.  
+- Containerizing all services using Docker for reproducible setups.  
   
 ---
-
 
 ## 📜 License
 
@@ -159,7 +137,5 @@ I used **Docker and `docker-compose`** to containerize:
 
 ## 📬 Contact
 
-- This project is part of my personal developer portfolio.  If you're hiring or open to referrals, I’d love to connect!
 - 📫 Connect with me on [LinkedIn – Rani Rangari](https://www.linkedin.com/in/rani-rangari/)  
-⭐ If you found this project helpful, consider giving it a star!
-
+⭐ If you found this project helpful or insightful, feel free to leave a ⭐!
